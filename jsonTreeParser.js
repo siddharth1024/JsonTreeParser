@@ -39,17 +39,13 @@ function getChildren(array, parent_index) {
 		var node = array[i]
 
 		if(node["id"] === parent_index)
-			continue;
+			continue
 		if(node["parentId"] === parent_index) {
-			children[node["name"]] = {
-										"id" : node["id"],
-										"name" : node["name"],
-										"children" : getChildren(array, node["id"])
-									 };	
+			children[node["name"]] = { "id" : node["id"], "name" : node["name"], "children" : getChildren(array, node["id"]) }
 		}
 	}
 	return children
 }
 
-var output = getChildren(data, null);
-console.log("Parsed Data : ", output)
+var output = getChildren(data, null)
+console.log("Parsed Data:", output)
