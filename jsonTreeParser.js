@@ -32,12 +32,9 @@ var data = [
 		]
 		
 function getChildren(array, parent_index) {
-	var children = []
-	
-	for(var i = 0; i < array.length; i++) {
-		
+	var children = []	
+	for(var i = 0; i < array.length; i++) {		
 		var node = array[i]
-
 		if(node["id"] === parent_index)
 			continue
 		if(node["parentId"] === parent_index) {
